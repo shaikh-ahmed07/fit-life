@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Membership Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 125%;
+            z-index: -1;
+            object-fit: cover;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin-top: 50px;
+            color: #fff;
+        }
+        h1 {
+            text-align: center;
+            color:#fa5a20;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+            font-size: 1.1em;
+        }
+        input, select {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        button {
+            padding: 10px;
+            background-color: #fa5a20;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e68a00;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/background.jpg" alt="Background Image" class="background-image"> <!-- Update this path -->
+
+    <div class="container">
+        <h1>Gym Membership Form</h1>
+        <form id="membershipForm">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required>
+            
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="membership">Membership Type:</label>
+            <select id="membership" name="membership" required>
+                <option value="monthly">Monthly</option>
+                <option value="quarterly">Quarterly</option>
+                <option value="annual">Annual</option>
+            </select>
+            
+            <button type="submit">Join Now</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('membershipForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            window.location.href = 'success.html'; // Redirect to success.html
+        });
+    </script>
+</body>
+</html>
